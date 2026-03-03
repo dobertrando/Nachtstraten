@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_46d5b6b3b43e30796e07212ceba663c8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_46d5b6b3b43e30796e07212ceba663c8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_46d5b6b3b43e30796e07212ceba663c8 = L.map(
+                "map_46d5b6b3b43e30796e07212ceba663c8",
+                {
+                    center: [51.20956511627906, 4.395356511627907],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_80e9c7c71b1f660161e67ae27dd4bee5 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_80e9c7c71b1f660161e67ae27dd4bee5.addTo(map_46d5b6b3b43e30796e07212ceba663c8);
+        
+    
+            var poly_line_1e01e593a1f10b02fd5b88573159c029 = L.polyline(
+                [[51.20834, 4.39297], [51.20832, 4.39297], [51.20837, 4.39297], [51.20985, 4.3946], [51.2101, 4.39487], [51.2101, 4.39486], [51.2101, 4.39486], [51.21011, 4.39485], [51.21021, 4.395], [51.21022, 4.39502], [51.21021, 4.39505], [51.21028, 4.39515], [51.21033, 4.39521], [51.21031, 4.3952], [51.21033, 4.3952], [51.21035, 4.39518], [51.2106, 4.39538], [51.21062, 4.39543], [51.2106, 4.39542], [51.2107, 4.39555], [51.21081, 4.39576], [51.21082, 4.39575], [51.2109, 4.39634], [51.21085, 4.39645], [51.2107, 4.39676], [51.2106, 4.39694], [51.21053, 4.39695], [51.2105, 4.39705], [51.21051, 4.39704], [51.21052, 4.39704], [51.21048, 4.39702], [51.21048, 4.39703], [51.2105, 4.39707], [51.21018, 4.39725], [51.20832, 4.39782], [51.20769, 4.3979], [51.20742, 4.39762], [51.20607, 4.39365], [51.20642, 4.39251], [51.20647, 4.39258], [51.20673, 4.3927], [51.20687, 4.39266], [51.20688, 4.3927]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_46d5b6b3b43e30796e07212ceba663c8);
+        
+    
+            poly_line_1e01e593a1f10b02fd5b88573159c029.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eb4425716c4e9dc5950bf69cd55411d6 = L.marker(
+                [51.20837, 4.39297],
+                {
+}
+            ).addTo(map_46d5b6b3b43e30796e07212ceba663c8);
+        
+    
+            var icon_ba6dec74b0d07aa8a8831cd784d810ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_eb4425716c4e9dc5950bf69cd55411d6.bindTooltip(
+                `<div>
+                     🏘️ Graaf van Hoornestraat<br>⚖️ Totaal: 525 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb4425716c4e9dc5950bf69cd55411d6.setIcon(icon_ba6dec74b0d07aa8a8831cd784d810ce);
+            
+    
+            var marker_9e5e3f74a4075c8693dcd076796bf688 = L.marker(
+                [51.21082, 4.39575],
+                {
+}
+            ).addTo(map_46d5b6b3b43e30796e07212ceba663c8);
+        
+    
+            var icon_cb50d90b7c9f866ce250ea044b67d957 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9e5e3f74a4075c8693dcd076796bf688.bindTooltip(
+                `<div>
+                     🏘️ Volkstraat<br>⚖️ Totaal: 845 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9e5e3f74a4075c8693dcd076796bf688.setIcon(icon_cb50d90b7c9f866ce250ea044b67d957);
+            
+    
+            var marker_9e2e984d35f9df9887fc1ef357bf0021 = L.marker(
+                [51.2105, 4.39707],
+                {
+}
+            ).addTo(map_46d5b6b3b43e30796e07212ceba663c8);
+        
+    
+            var icon_f7ba6fbf1738dae327bad60abeef0335 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9e2e984d35f9df9887fc1ef357bf0021.bindTooltip(
+                `<div>
+                     🏘️ Scheldestraat<br>⚖️ Totaal: 300 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9e2e984d35f9df9887fc1ef357bf0021.setIcon(icon_f7ba6fbf1738dae327bad60abeef0335);
+            
+    
+            var marker_f6a5fe266db41dbf31048bf6834a1432 = L.marker(
+                [51.20607, 4.39365],
+                {
+}
+            ).addTo(map_46d5b6b3b43e30796e07212ceba663c8);
+        
+    
+            var icon_448bf7d291d09f1cacd3b7cb0fcb90e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_f6a5fe266db41dbf31048bf6834a1432.bindTooltip(
+                `<div>
+                     🏘️ Amerikalei<br>⚖️ Totaal: 35 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6a5fe266db41dbf31048bf6834a1432.setIcon(icon_448bf7d291d09f1cacd3b7cb0fcb90e8);
+            
+    
+            var marker_43ad67ec38e3e08e5989ac7a7d364f4b = L.marker(
+                [51.20688, 4.3927],
+                {
+}
+            ).addTo(map_46d5b6b3b43e30796e07212ceba663c8);
+        
+    
+            var icon_9dccf30eca5bb3234ccc56b8fe5a39e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_43ad67ec38e3e08e5989ac7a7d364f4b.bindTooltip(
+                `<div>
+                     🏘️ Graaf van Hoornestraat<br>⚖️ Totaal: 15 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_43ad67ec38e3e08e5989ac7a7d364f4b.setIcon(icon_9dccf30eca5bb3234ccc56b8fe5a39e7);
+            
+</script>
+</html>

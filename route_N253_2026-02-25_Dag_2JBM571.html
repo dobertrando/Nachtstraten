@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c5f145ef1bea76be645281ecf830d8e9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c5f145ef1bea76be645281ecf830d8e9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c5f145ef1bea76be645281ecf830d8e9 = L.map(
+                "map_c5f145ef1bea76be645281ecf830d8e9",
+                {
+                    center: [51.16694218298556, 4.386129261637239],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d2fc6d3651f647124b98c69e3f738c74 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d2fc6d3651f647124b98c69e3f738c74.addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var poly_line_9a8221eabf2f8d98e528ab141c3bdffe = L.polyline(
+                [[51.1494, 4.3804], [51.14842, 4.38052], [51.14475, 4.37959], [51.14357, 4.37928], [51.14357, 4.37928], [51.14355, 4.37932], [51.14335, 4.37925], [51.14313, 4.37916], [51.14313, 4.37915], [51.14312, 4.37917], [51.14312, 4.37915], [51.14277, 4.37907], [51.14277, 4.37908], [51.14277, 4.3791], [51.14277, 4.37905], [51.14277, 4.37906], [51.14269, 4.37952], [51.14625, 4.38062], [51.14997, 4.38168], [51.15114, 4.38201], [51.15115, 4.382], [51.15212, 4.3823], [51.1521, 4.38232], [51.15212, 4.38231], [51.15214, 4.38228], [51.15213, 4.38229], [51.15208, 4.38441], [51.15345, 4.38578], [51.15455, 4.387], [51.1554, 4.38923], [51.15674, 4.38912]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_9a8221eabf2f8d98e528ab141c3bdffe.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_82eb2ab438f4849b5caa49633c483635 = L.polyline(
+                [[51.15674, 4.38912], [51.15767, 4.38878], [51.15872, 4.38823], [51.15955, 4.3878], [51.16023, 4.38749], [51.16192, 4.38689], [51.16206, 4.3869], [51.16215, 4.38685], [51.16225, 4.38683], [51.1624, 4.38689], [51.16248, 4.38693], [51.16259, 4.38694], [51.16283, 4.38695], [51.16288, 4.38702], [51.16286, 4.38703], [51.16294, 4.38721], [51.1628, 4.3897]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_82eb2ab438f4849b5caa49633c483635.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_302d1baa245cfdb5bf4ca6cc5fa6c9c1 = L.polyline(
+                [[51.1628, 4.3897], [51.16275, 4.39239], [51.1644, 4.39178], [51.16645, 4.39088], [51.16775, 4.3927], [51.16842, 4.39449], [51.16953, 4.39466], [51.17033, 4.39506], [51.17206, 4.39414], [51.17215, 4.39395], [51.17315, 4.39391], [51.17438, 4.39424]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_302d1baa245cfdb5bf4ca6cc5fa6c9c1.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_bac3ce13269b436fc458add0e7b5a393 = L.polyline(
+                [[51.17438, 4.39424], [51.17437, 4.3943], [51.1744, 4.39432], [51.1744, 4.39435], [51.17443, 4.39443], [51.1746, 4.39462], [51.1747, 4.3947], [51.17488, 4.39495], [51.17491, 4.39493], [51.1749, 4.39493], [51.17496, 4.3949], [51.17517, 4.39522], [51.17543, 4.39555], [51.17565, 4.39582], [51.17585, 4.39611], [51.17602, 4.3966], [51.17614, 4.39687], [51.17634, 4.39729], [51.17649, 4.39756], [51.1765, 4.39758], [51.17653, 4.3976], [51.17656, 4.39777], [51.17669, 4.39801], [51.17685, 4.39842], [51.17697, 4.39867], [51.17699, 4.3987], [51.17765, 4.39856]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_bac3ce13269b436fc458add0e7b5a393.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_518fe899d686c113f4144d2a7b4ad5c7 = L.polyline(
+                [[51.17765, 4.39856], [51.17888, 4.39703], [51.18095, 4.39553], [51.18235, 4.39454], [51.1834, 4.39642], [51.1844, 4.39895], [51.18527, 4.40128], [51.18632, 4.4041], [51.1876, 4.40413]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_518fe899d686c113f4144d2a7b4ad5c7.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_9dbc8e8d900ad275a3c2e1fd8eb8a0a2 = L.polyline(
+                [[51.1876, 4.40413], [51.18909, 4.4038], [51.18952, 4.40081], [51.1896, 4.40035], [51.18965, 4.40033], [51.18965, 4.40029], [51.18953, 4.39842], [51.18911, 4.39768], [51.18877, 4.3981], [51.18876, 4.3981], [51.18877, 4.3981], [51.18877, 4.39808], [51.18877, 4.39809], [51.18877, 4.39812], [51.18877, 4.39806], [51.18877, 4.39804], [51.18903, 4.3985], [51.18942, 4.39862], [51.18898, 4.40282], [51.1888, 4.40364], [51.18753, 4.40389]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_9dbc8e8d900ad275a3c2e1fd8eb8a0a2.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_f9863de30c2948c1dfd25eebb6f66943 = L.polyline(
+                [[51.18753, 4.40389], [51.18723, 4.4041], [51.18591, 4.40501]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_f9863de30c2948c1dfd25eebb6f66943.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_cd106cd57394f30e9f32988a02501b85 = L.polyline(
+                [[51.18591, 4.40501], [51.18589, 4.40504], [51.1859, 4.40507], [51.18591, 4.40503], [51.18591, 4.40501], [51.18573, 4.40518], [51.18483, 4.40587], [51.18328, 4.40695], [51.18132, 4.40828], [51.18112, 4.40841], [51.1805, 4.40887], [51.18025, 4.40903], [51.17943, 4.40965], [51.17943, 4.40965], [51.17942, 4.40965], [51.17943, 4.40965], [51.17944, 4.40962], [51.17916, 4.40979], [51.17915, 4.4098], [51.17878, 4.41005], [51.17747, 4.41099], [51.1774, 4.41104], [51.17655, 4.41165], [51.1765, 4.41167], [51.17621, 4.41187], [51.1762, 4.41187], [51.17591, 4.41205]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_cd106cd57394f30e9f32988a02501b85.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_a5552a21e1c0ca95c11942b9376f6947 = L.polyline(
+                [[51.17591, 4.41205], [51.17474, 4.40863], [51.17405, 4.40416], [51.17379, 4.40467], [51.17352, 4.40509], [51.17351, 4.40509], [51.17275, 4.4037], [51.17279, 4.40128], [51.17232, 4.39992]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_a5552a21e1c0ca95c11942b9376f6947.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_db24ff7bb95eb8007909f57b32814765 = L.polyline(
+                [[51.17232, 4.39992], [51.17216, 4.40002], [51.17198, 4.40018], [51.17134, 4.40067], [51.17114, 4.40078], [51.17088, 4.4009], [51.17082, 4.40103], [51.17081, 4.40103], [51.17082, 4.40102], [51.1708, 4.40102], [51.1708, 4.40101], [51.17078, 4.40104], [51.1702, 4.39777]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_db24ff7bb95eb8007909f57b32814765.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ca06b03446daf01e06aa7afff9e3c2f4 = L.polyline(
+                [[51.1702, 4.39777], [51.1699, 4.39523], [51.16977, 4.39251], [51.16995, 4.3907], [51.17033, 4.38796], [51.17022, 4.38655], [51.16796, 4.38593], [51.1679, 4.3859], [51.16505, 4.38512], [51.16332, 4.38435], [51.16318, 4.3821], [51.16189, 4.37992], [51.16188, 4.37993], [51.161, 4.38036]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_ca06b03446daf01e06aa7afff9e3c2f4.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_c53dd2de259302af3df368b2aacb34d0 = L.polyline(
+                [[51.161, 4.38036], [51.16097, 4.38035], [51.16096, 4.38038], [51.16098, 4.38037], [51.16085, 4.38035], [51.15999, 4.38063], [51.15923, 4.38089], [51.15878, 4.38108], [51.1584, 4.38125], [51.15827, 4.38132], [51.1583, 4.38132], [51.15832, 4.38131], [51.15817, 4.38137], [51.15817, 4.38137], [51.15818, 4.38135], [51.15818, 4.38137], [51.15793, 4.38147], [51.15793, 4.38147], [51.15747, 4.3817], [51.15742, 4.38175], [51.15732, 4.3818], [51.15713, 4.3819], [51.15688, 4.38216], [51.15683, 4.38235], [51.1568, 4.38265], [51.15606, 4.38246]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_c53dd2de259302af3df368b2aacb34d0.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7f9293ccc69b428ef7f57bff69da7990 = L.polyline(
+                [[51.15606, 4.38246], [51.1561, 4.38012], [51.156, 4.37746]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_7f9293ccc69b428ef7f57bff69da7990.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_fb29c2f0b7621c10f4943c7f77107c90 = L.polyline(
+                [[51.156, 4.37746], [51.15549, 4.37432], [51.1555, 4.37392], [51.1561, 4.37325], [51.1566, 4.37255], [51.1566, 4.37255], [51.1566, 4.37255], [51.1566, 4.37255], [51.1566, 4.37254], [51.1566, 4.37252], [51.15665, 4.37248], [51.15738, 4.3717], [51.15865, 4.3742], [51.15907, 4.37695], [51.15911, 4.37708], [51.15912, 4.37707], [51.15907, 4.37498], [51.1577, 4.37217], [51.1577, 4.37212], [51.15768, 4.37211], [51.15779, 4.37102], [51.1596, 4.36859], [51.15975, 4.36838], [51.15975, 4.36838], [51.1597, 4.36838], [51.15967, 4.36837], [51.15967, 4.36837], [51.15905, 4.36929], [51.15782, 4.36778], [51.15674, 4.36628], [51.15553, 4.36787], [51.15441, 4.36931], [51.15425, 4.36952], [51.15398, 4.36993], [51.15397, 4.36991], [51.15393, 4.3699], [51.15393, 4.36993], [51.15394, 4.36992], [51.15395, 4.36992], [51.15362, 4.37032], [51.15378, 4.37106], [51.15475, 4.3739], [51.1548, 4.3744], [51.15475, 4.37443], [51.15476, 4.37443], [51.15475, 4.3744], [51.15397, 4.37508], [51.15338, 4.3776], [51.15215, 4.37795], [51.15206, 4.37805], [51.15221, 4.37792], [51.15218, 4.37788], [51.15218, 4.37789], [51.1533, 4.37765], [51.1534, 4.379], [51.1536, 4.37915], [51.1536, 4.37916], [51.15362, 4.37915], [51.15365, 4.37915], [51.15365, 4.37914], [51.15364, 4.37915], [51.15365, 4.37915], [51.15363, 4.37917], [51.15362, 4.37916], [51.15362, 4.37917], [51.15359, 4.37915], [51.15358, 4.37915], [51.1535, 4.37912], [51.15337, 4.37958], [51.15334, 4.38113], [51.15385, 4.38265]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_fb29c2f0b7621c10f4943c7f77107c90.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_b525172d1b1b6c76b4a8bcaa4940c43e = L.polyline(
+                [[51.15385, 4.38265], [51.15773, 4.38376], [51.16651, 4.3862], [51.168, 4.38662], [51.16927, 4.38726], [51.16925, 4.38783], [51.16922, 4.38799], [51.16927, 4.38775], [51.16927, 4.38768], [51.16929, 4.38742], [51.16932, 4.38721], [51.16932, 4.38706], [51.17039, 4.38679], [51.17058, 4.38431], [51.1703, 4.38462], [51.17008, 4.38487], [51.1698, 4.38509], [51.16978, 4.38517], [51.16979, 4.38517], [51.16975, 4.38518], [51.16974, 4.38518], [51.16968, 4.38516], [51.1697, 4.38517], [51.16966, 4.38513], [51.16966, 4.38513], [51.16971, 4.38513], [51.16972, 4.38514], [51.16972, 4.38514], [51.16971, 4.38513], [51.16973, 4.3851], [51.16973, 4.3851], [51.16974, 4.38513], [51.16974, 4.38513], [51.16973, 4.38515], [51.16973, 4.38515], [51.16973, 4.38516], [51.16974, 4.38515], [51.16975, 4.38513], [51.16976, 4.38516], [51.16975, 4.38516], [51.16975, 4.38515], [51.16975, 4.38516], [51.16975, 4.38515], [51.16975, 4.38516], [51.16973, 4.38516], [51.16975, 4.38517], [51.16975, 4.38515], [51.16972, 4.38515], [51.16974, 4.38514], [51.16977, 4.38515], [51.16979, 4.38516], [51.16979, 4.38516], [51.1698, 4.38517], [51.16978, 4.38515], [51.16977, 4.38511], [51.16977, 4.3851], [51.16978, 4.3851], [51.16975, 4.3851], [51.16971, 4.38512], [51.16966, 4.38515], [51.16964, 4.38516], [51.16968, 4.38515], [51.16969, 4.38515], [51.16965, 4.38519], [51.16965, 4.38521], [51.16968, 4.3852], [51.16972, 4.38517], [51.16977, 4.38515], [51.16982, 4.38513], [51.16983, 4.38512], [51.16983, 4.38514], [51.1698, 4.38514], [51.16977, 4.38513], [51.16977, 4.38511], [51.16975, 4.38512], [51.16976, 4.38513], [51.1698, 4.3851], [51.16983, 4.38508], [51.1698, 4.3851], [51.1698, 4.38512], [51.16973, 4.38517], [51.16973, 4.38515], [51.16975, 4.38515], [51.16975, 4.38515], [51.16977, 4.38514], [51.16978, 4.38511], [51.16977, 4.38508], [51.16974, 4.38505], [51.16973, 4.38503], [51.16973, 4.38502], [51.16975, 4.38505], [51.16978, 4.38512], [51.16977, 4.38514], [51.16977, 4.38511], [51.16977, 4.3851], [51.16977, 4.38506], [51.16975, 4.38505], [51.16975, 4.38507], [51.1697, 4.38508], [51.16974, 4.38511], [51.16977, 4.38515], [51.16975, 4.38512], [51.16975, 4.38511], [51.16973, 4.38509], [51.16973, 4.38507], [51.16974, 4.38508], [51.16975, 4.38508], [51.16975, 4.38508], [51.16974, 4.38511], [51.16973, 4.38511], [51.16972, 4.3851], [51.16971, 4.38512], [51.16969, 4.38513], [51.1697, 4.38513], [51.16976, 4.38513], [51.16975, 4.38513], [51.16973, 4.38512], [51.16973, 4.3851], [51.16975, 4.38512], [51.16975, 4.38512], [51.16977, 4.3851], [51.16977, 4.38511], [51.16977, 4.38512], [51.16978, 4.38512], [51.16982, 4.3851], [51.16983, 4.38509], [51.16983, 4.38508], [51.16983, 4.38508], [51.1698, 4.38506], [51.16983, 4.38504], [51.16986, 4.38503], [51.16783, 4.3859], [51.14701, 4.3786], [51.14712, 4.37884], [51.14718, 4.37743], [51.1472, 4.37724], [51.1472, 4.37733], [51.1472, 4.3775], [51.14268, 4.37904], [51.14269, 4.37903], [51.1426, 4.37904], [51.14508, 4.3802], [51.15038, 4.38167], [51.15367, 4.3826], [51.15688, 4.38355], [51.16073, 4.38464], [51.16254, 4.38516], [51.16485, 4.38579], [51.1669, 4.3863], [51.16934, 4.38695], [51.16977, 4.38708], [51.17047, 4.38703], [51.17062, 4.38497], [51.17063, 4.38473], [51.17045, 4.38455], [51.17013, 4.38507], [51.1702, 4.38492], [51.17015, 4.38515], [51.16975, 4.3856], [51.16981, 4.38553], [51.16982, 4.3855], [51.16983, 4.3855], [51.16983, 4.38552], [51.16983, 4.38552], [51.16982, 4.3855], [51.16982, 4.38552], [51.16982, 4.3855], [51.16983, 4.38551], [51.16983, 4.38552], [51.16983, 4.38551], [51.16984, 4.38552], [51.16983, 4.38552], [51.16985, 4.38552], [51.16983, 4.38553], [51.16982, 4.38552], [51.16986, 4.38552], [51.16987, 4.38551], [51.16987, 4.3855], [51.16987, 4.38552], [51.16987, 4.38551], [51.16987, 4.38552], [51.16985, 4.3855], [51.16985, 4.3855], [51.16984, 4.38549], [51.16985, 4.38551], [51.16987, 4.38551], [51.16987, 4.3855], [51.16983, 4.38549], [51.16987, 4.38555], [51.16984, 4.3855], [51.1698, 4.3855], [51.1698, 4.38548], [51.1698, 4.38551], [51.16983, 4.38552], [51.16983, 4.38552], [51.16982, 4.3855], [51.16985, 4.38553], [51.1699, 4.38555], [51.16989, 4.38555], [51.1699, 4.38555], [51.16985, 4.38553], [51.16985, 4.3855], [51.16982, 4.38548], [51.16984, 4.3855], [51.16985, 4.3855], [51.16986, 4.38553], [51.16987, 4.38553], [51.16983, 4.3855], [51.16981, 4.3855], [51.16982, 4.38551], [51.16983, 4.38552], [51.16985, 4.38553], [51.16987, 4.38552], [51.16985, 4.3855], [51.16985, 4.38552], [51.16983, 4.38552], [51.16983, 4.38551], [51.16983, 4.3855], [51.16983, 4.3855], [51.16985, 4.3855], [51.16987, 4.3855], [51.16987, 4.3855], [51.16985, 4.3855], [51.16987, 4.38551], [51.1699, 4.38552], [51.1699, 4.38554], [51.16988, 4.38552], [51.16988, 4.38552], [51.16989, 4.38553], [51.16985, 4.38548], [51.1699, 4.3855], [51.16988, 4.38552], [51.16987, 4.38552], [51.16985, 4.38555], [51.16985, 4.38553], [51.16985, 4.38552], [51.16989, 4.38552], [51.16987, 4.38552], [51.16987, 4.38552], [51.16987, 4.38553], [51.16987, 4.38552], [51.16986, 4.3855], [51.16987, 4.38551], [51.16985, 4.3855], [51.16983, 4.38551], [51.16981, 4.3855], [51.16983, 4.3855], [51.16983, 4.3855], [51.16983, 4.3855], [51.16985, 4.38552], [51.16985, 4.38549], [51.16985, 4.38548], [51.16988, 4.38544], [51.17013, 4.385], [51.17015, 4.38479], [51.17002, 4.38495], [51.16997, 4.385], [51.16995, 4.38505], [51.16998, 4.38507], [51.16995, 4.38508], [51.16997, 4.38506], [51.16998, 4.38508], [51.16995, 4.38507], [51.16995, 4.38505], [51.16995, 4.38505], [51.16994, 4.38507], [51.16994, 4.38507], [51.17001, 4.385], [51.17001, 4.385], [51.16991, 4.38503], [51.16991, 4.38503], [51.16995, 4.385], [51.16995, 4.385], [51.17053, 4.38452], [51.17076, 4.3831], [51.17121, 4.38273], [51.17121, 4.38273], [51.17135, 4.38258], [51.17135, 4.38258], [51.17133, 4.38258], [51.17133, 4.38258], [51.17177, 4.38232], [51.17177, 4.38232], [51.1718, 4.38233], [51.1718, 4.38233], [51.17179, 4.38232], [51.17179, 4.38232], [51.17198, 4.38222], [51.17198, 4.38222], [51.17208, 4.38319], [51.17208, 4.38319], [51.172, 4.38425], [51.172, 4.38425], [51.17207, 4.38437], [51.17207, 4.38437], [51.17217, 4.3846], [51.17217, 4.3846], [51.17216, 4.38474], [51.17218, 4.38478], [51.17216, 4.38485], [51.17215, 4.38482], [51.17214, 4.38478], [51.17215, 4.38476], [51.17215, 4.38475], [51.17215, 4.38473], [51.17214, 4.38467], [51.17212, 4.38462], [51.17212, 4.38461], [51.17211, 4.38465], [51.17207, 4.38467], [51.17205, 4.38463], [51.17205, 4.38457], [51.17207, 4.38457], [51.17208, 4.38462], [51.17209, 4.38465], [51.17208, 4.38467], [51.1721, 4.38468], [51.1721, 4.38468], [51.17213, 4.3847], [51.17213, 4.3847], [51.1721, 4.38459], [51.1721, 4.38459], [51.1721, 4.38469], [51.1721, 4.38469], [51.17213, 4.38688], [51.17213, 4.38688], [51.16996, 4.38649], [51.16996, 4.38649], [51.16822, 4.38603], [51.16822, 4.38603], [51.16659, 4.38558], [51.16659, 4.38558], [51.164, 4.38486], [51.164, 4.38486], [51.16042, 4.38386], [51.16042, 4.38386], [51.15702, 4.38293], [51.15535, 4.38247], [51.15535, 4.38247], [51.15496, 4.38235], [51.15163, 4.38142], [51.14942, 4.38047], [51.14942, 4.38047], [51.1489, 4.37898], [51.14944, 4.37612], [51.14944, 4.37612], [51.14997, 4.37391], [51.14997, 4.37391], [51.14966, 4.37307], [51.14966, 4.37307], [51.14965, 4.37305], [51.14965, 4.37305], [51.14965, 4.37306], [51.14965, 4.37306]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            poly_line_b525172d1b1b6c76b4a8bcaa4940c43e.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2303d5188b68bcfed7114d7f01da3c99 = L.marker(
+                [51.15213, 4.38229],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_01b5cef480a4ec806148793de6689d73 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2303d5188b68bcfed7114d7f01da3c99.bindTooltip(
+                `<div>
+                     🏘️ Antwerpsesteenweg<br>⚖️ Totaal: 10 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2303d5188b68bcfed7114d7f01da3c99.setIcon(icon_01b5cef480a4ec806148793de6689d73);
+            
+    
+            var marker_a421ee240644fb91e47ec0f484bfb518 = L.marker(
+                [51.1554, 4.38923],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_21334e0be6b1424c5ff8c9e455d468e6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a421ee240644fb91e47ec0f484bfb518.bindTooltip(
+                `<div>
+                     🏘️ Planetariumlaan<br>⚖️ Totaal: 10 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a421ee240644fb91e47ec0f484bfb518.setIcon(icon_21334e0be6b1424c5ff8c9e455d468e6);
+            
+    
+            var marker_4e9e7fcb3eb99d969ed35dd79538ff3e = L.marker(
+                [51.16294, 4.38721],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_49dd654945a63bc79619e604acbdffe7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_4e9e7fcb3eb99d969ed35dd79538ff3e.bindTooltip(
+                `<div>
+                     🏘️ Kernenergiestraat<br>⚖️ Totaal: 470 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e9e7fcb3eb99d969ed35dd79538ff3e.setIcon(icon_49dd654945a63bc79619e604acbdffe7);
+            
+    
+            var marker_aa39b0fcdaea3748078dd9b9db84f63b = L.marker(
+                [51.16275, 4.39239],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_ffa84fec8eb7d55c6906593e3054f5db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_aa39b0fcdaea3748078dd9b9db84f63b.bindTooltip(
+                `<div>
+                     🏘️ Krijgslaan<br>⚖️ Totaal: 20 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa39b0fcdaea3748078dd9b9db84f63b.setIcon(icon_ffa84fec8eb7d55c6906593e3054f5db);
+            
+    
+            var marker_4736698081b6b97447c5b4cebd609345 = L.marker(
+                [51.16645, 4.39088],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_9a93929e504f8a87c54494e908e74fbb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_4736698081b6b97447c5b4cebd609345.bindTooltip(
+                `<div>
+                     🏘️ Gallaitlaan<br>⚖️ Totaal: 30 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4736698081b6b97447c5b4cebd609345.setIcon(icon_9a93929e504f8a87c54494e908e74fbb);
+            
+    
+            var marker_3394f0147c498bfba0fa69abe9570949 = L.marker(
+                [51.17699, 4.3987],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_6ae51236bd725939e648523797df7a18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_3394f0147c498bfba0fa69abe9570949.bindTooltip(
+                `<div>
+                     🏘️ Laarstraat<br>⚖️ Totaal: 815 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3394f0147c498bfba0fa69abe9570949.setIcon(icon_6ae51236bd725939e648523797df7a18);
+            
+    
+            var marker_66ee1350060975a401f6708027a2e501 = L.marker(
+                [51.1888, 4.40364],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_c5a83b7a5654d8dc4bb1dabb4db5e6bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_66ee1350060975a401f6708027a2e501.bindTooltip(
+                `<div>
+                     🏘️ Vogelzanglaan<br>⚖️ Totaal: 210 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_66ee1350060975a401f6708027a2e501.setIcon(icon_c5a83b7a5654d8dc4bb1dabb4db5e6bd);
+            
+    
+            var marker_100e89fdf28b67145594068518140caf = L.marker(
+                [51.18723, 4.4041],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_537fb549194cfff36edad6f010d29315 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_100e89fdf28b67145594068518140caf.bindTooltip(
+                `<div>
+                     🏘️ Gerard Le Grellelaan<br>⚖️ Totaal: 15 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_100e89fdf28b67145594068518140caf.setIcon(icon_537fb549194cfff36edad6f010d29315);
+            
+    
+            var marker_fa5d749402d0c14c992768479249bbfd = L.marker(
+                [51.1762, 4.41187],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_5cd343032627ac2a94a84cb7b146fd70 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fa5d749402d0c14c992768479249bbfd.bindTooltip(
+                `<div>
+                     🏘️ Beukenlaan<br>⚖️ Totaal: 380 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa5d749402d0c14c992768479249bbfd.setIcon(icon_5cd343032627ac2a94a84cb7b146fd70);
+            
+    
+            var marker_902b9b347210ab6b03c1412fcfc8b118 = L.marker(
+                [51.17351, 4.40509],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_7654a0da2071fe7c5e8730b1900db9ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_902b9b347210ab6b03c1412fcfc8b118.bindTooltip(
+                `<div>
+                     🏘️ Groenenborgerlaan<br>⚖️ Totaal: 10 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_902b9b347210ab6b03c1412fcfc8b118.setIcon(icon_7654a0da2071fe7c5e8730b1900db9ba);
+            
+    
+            var marker_2d2943221ccede37afec44f2af04a5a6 = L.marker(
+                [51.17078, 4.40104],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_670f876482c49b0339b0be8f3e5f7ee8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2d2943221ccede37afec44f2af04a5a6.bindTooltip(
+                `<div>
+                     🏘️ Kerkhofstraat<br>⚖️ Totaal: 435 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d2943221ccede37afec44f2af04a5a6.setIcon(icon_670f876482c49b0339b0be8f3e5f7ee8);
+            
+    
+            var marker_0fd6835126250f357bdcc2672581ea97 = L.marker(
+                [51.1699, 4.39523],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_915a5908643670c5f3ee5d1f929f71f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_0fd6835126250f357bdcc2672581ea97.bindTooltip(
+                `<div>
+                     🏘️ Sint-Bavostraat<br>⚖️ Totaal: 15 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0fd6835126250f357bdcc2672581ea97.setIcon(icon_915a5908643670c5f3ee5d1f929f71f6);
+            
+    
+            var marker_a6d36ff6c39b9f4632669d0dba6b30b0 = L.marker(
+                [51.17033, 4.38796],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_53f4ffa3d44a63b1f99fa5a23ed5f922 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a6d36ff6c39b9f4632669d0dba6b30b0.bindTooltip(
+                `<div>
+                     🏘️ Kleine Steenweg<br>⚖️ Totaal: 30 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a6d36ff6c39b9f4632669d0dba6b30b0.setIcon(icon_53f4ffa3d44a63b1f99fa5a23ed5f922);
+            
+    
+            var marker_915438d1f72ace85b2b6508bc2ec3140 = L.marker(
+                [51.1568, 4.38265],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_1ce603df9d984f358ca3f54caab67411 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_915438d1f72ace85b2b6508bc2ec3140.bindTooltip(
+                `<div>
+                     🏘️ Oudebaan<br>⚖️ Totaal: 425 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_915438d1f72ace85b2b6508bc2ec3140.setIcon(icon_1ce603df9d984f358ca3f54caab67411);
+            
+    
+            var marker_88d5469242b1bfe6845d6738f01fca89 = L.marker(
+                [51.1561, 4.38012],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_b68a80681dd55aedd40a01bc0c419f1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_88d5469242b1bfe6845d6738f01fca89.bindTooltip(
+                `<div>
+                     🏘️ Boomsesteenweg<br>⚖️ Totaal: 20 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88d5469242b1bfe6845d6738f01fca89.setIcon(icon_b68a80681dd55aedd40a01bc0c419f1d);
+            
+    
+            var marker_5c9f79cdcc96939083ac4300e5049bef = L.marker(
+                [51.15549, 4.37432],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_6fcc6dfaf274e5d3bceb18f447d5efe0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_5c9f79cdcc96939083ac4300e5049bef.bindTooltip(
+                `<div>
+                     🏘️ Dynamicalaan<br>⚖️ Totaal: 10 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c9f79cdcc96939083ac4300e5049bef.setIcon(icon_6fcc6dfaf274e5d3bceb18f447d5efe0);
+            
+    
+            var marker_f3999111b8d4e3decb5accf77570c58b = L.marker(
+                [51.15665, 4.37248],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_7a34dd696d8760e7d06f594d04ddc565 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_f3999111b8d4e3decb5accf77570c58b.bindTooltip(
+                `<div>
+                     🏘️ Terbekehofdreef<br>⚖️ Totaal: 290 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3999111b8d4e3decb5accf77570c58b.setIcon(icon_7a34dd696d8760e7d06f594d04ddc565);
+            
+    
+            var marker_cf7c02d592826e865a584b512eb52130 = L.marker(
+                [51.15905, 4.36929],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_23d7f02fd970af7a22c705b6b964cf5b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_cf7c02d592826e865a584b512eb52130.bindTooltip(
+                `<div>
+                     🏘️ Terbekehofdreef<br>⚖️ Totaal: 140 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf7c02d592826e865a584b512eb52130.setIcon(icon_23d7f02fd970af7a22c705b6b964cf5b);
+            
+    
+            var marker_4385ab318d6aa6523e0dd2a27edd3fcf = L.marker(
+                [51.15475, 4.3744],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_f02e6cf4474052b225530b266be374e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_4385ab318d6aa6523e0dd2a27edd3fcf.bindTooltip(
+                `<div>
+                     🏘️ Fotografielaan<br>⚖️ Totaal: 15 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4385ab318d6aa6523e0dd2a27edd3fcf.setIcon(icon_f02e6cf4474052b225530b266be374e5);
+            
+    
+            var marker_26d0bdd740e2914c5b9adc8817e4ffe3 = L.marker(
+                [51.15334, 4.38113],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_9f7ffe1b6481c3dcf4a05dfedaa001b8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_26d0bdd740e2914c5b9adc8817e4ffe3.bindTooltip(
+                `<div>
+                     🏘️ Terbekehofdreef<br>⚖️ Totaal: 175 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_26d0bdd740e2914c5b9adc8817e4ffe3.setIcon(icon_9f7ffe1b6481c3dcf4a05dfedaa001b8);
+            
+    
+            var marker_0bbcb47e4faa2989459249a879293851 = L.marker(
+                [51.168, 4.38662],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_142afc08f940dfa350418198ce2409b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_0bbcb47e4faa2989459249a879293851.bindTooltip(
+                `<div>
+                     🏘️ Boomsesteenweg<br>⚖️ Totaal: 10 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0bbcb47e4faa2989459249a879293851.setIcon(icon_142afc08f940dfa350418198ce2409b7);
+            
+    
+            var marker_f1479c64b002641fabdf6e1a35741b1c = L.marker(
+                [51.16932, 4.38706],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_c485ab5b06f266b4e2c59ae0a4d2c4ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_f1479c64b002641fabdf6e1a35741b1c.bindTooltip(
+                `<div>
+                     🏘️ Valkenveld<br>⚖️ Totaal: 255 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1479c64b002641fabdf6e1a35741b1c.setIcon(icon_c485ab5b06f266b4e2c59ae0a4d2c4ce);
+            
+    
+            var marker_209733f51840eb0ff472a3a044ef033f = L.marker(
+                [51.17047, 4.38703],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_8a8b4f470b104a52b6bf5b61621d2107 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_209733f51840eb0ff472a3a044ef033f.bindTooltip(
+                `<div>
+                     🏘️ Boomsesteenweg<br>⚖️ Totaal: 3975 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_209733f51840eb0ff472a3a044ef033f.setIcon(icon_8a8b4f470b104a52b6bf5b61621d2107);
+            
+    
+            var marker_f9b6f192380a56bfd0b0346de032d01c = L.marker(
+                [51.17198, 4.38222],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_a1ad83e7636b4d12b5da590cfcba56c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_f9b6f192380a56bfd0b0346de032d01c.bindTooltip(
+                `<div>
+                     🏘️ Valkstraat<br>⚖️ Totaal: 15 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f9b6f192380a56bfd0b0346de032d01c.setIcon(icon_a1ad83e7636b4d12b5da590cfcba56c0);
+            
+    
+            var marker_c7b763791927110f1503616ca58845de = L.marker(
+                [51.17213, 4.38688],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_fc1ead4c391d407c147fc3ff9fefd39b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c7b763791927110f1503616ca58845de.bindTooltip(
+                `<div>
+                     🏘️ Jules Moretuslei<br>⚖️ Totaal: 35 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7b763791927110f1503616ca58845de.setIcon(icon_fc1ead4c391d407c147fc3ff9fefd39b);
+            
+    
+            var marker_e114c3f14f55d207d11befb4a5675ca3 = L.marker(
+                [51.14965, 4.37306],
+                {
+}
+            ).addTo(map_c5f145ef1bea76be645281ecf830d8e9);
+        
+    
+            var icon_3a07dbeee7c28d264a446d5fb0b552b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_e114c3f14f55d207d11befb4a5675ca3.bindTooltip(
+                `<div>
+                     🏘️ Boomsesteenweg<br>⚖️ Totaal: 30 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e114c3f14f55d207d11befb4a5675ca3.setIcon(icon_3a07dbeee7c28d264a446d5fb0b552b3);
+            
+</script>
+</html>
