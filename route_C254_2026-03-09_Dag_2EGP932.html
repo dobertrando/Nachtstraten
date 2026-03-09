@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d92b152db8c542fe668646cef7b7a6aa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d92b152db8c542fe668646cef7b7a6aa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d92b152db8c542fe668646cef7b7a6aa = L.map(
+                "map_d92b152db8c542fe668646cef7b7a6aa",
+                {
+                    center: [51.20624908366534, 4.418773864541833],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4a36d3fd317437b5d024e1d952be5961 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4a36d3fd317437b5d024e1d952be5961.addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var poly_line_d849b9bcaf9a3a1ab23e56c2f38b84c1 = L.polyline(
+                [[51.19758, 4.37621], [51.1976, 4.3762], [51.1976, 4.3762], [51.19759, 4.37619], [51.19757, 4.3762], [51.19757, 4.37621], [51.19754, 4.37621], [51.19755, 4.37621], [51.19756, 4.37622], [51.19753, 4.37621], [51.19752, 4.37622], [51.19753, 4.37623], [51.19754, 4.37623], [51.19753, 4.3762], [51.19753, 4.37622], [51.19754, 4.37622], [51.19755, 4.37622], [51.19755, 4.37622], [51.1976, 4.37616], [51.19775, 4.37567], [51.19775, 4.37568], [51.19775, 4.37568], [51.19774, 4.37567], [51.19775, 4.37567], [51.19775, 4.37567], [51.19775, 4.37566], [51.19775, 4.37569], [51.19775, 4.37569], [51.19775, 4.37568], [51.19777, 4.37567], [51.19819, 4.37557], [51.19931, 4.37567], [51.19785, 4.3773], [51.1964, 4.38351], [51.19371, 4.38662], [51.19457, 4.38485], [51.19515, 4.387], [51.1952, 4.387], [51.19605, 4.38851], [51.19704, 4.38939], [51.19878, 4.39059], [51.20023, 4.39123], [51.20188, 4.3924], [51.20282, 4.39319], [51.20455, 4.39488], [51.20473, 4.3961], [51.20631, 4.39848], [51.20778, 4.40239], [51.2089, 4.40547], [51.2102, 4.40908], [51.21099, 4.41025], [51.21055, 4.41373], [51.21023, 4.41793], [51.21047, 4.42059], [51.21048, 4.4206], [51.2106, 4.42246], [51.21064, 4.4243], [51.20984, 4.42441], [51.20958, 4.42488], [51.20958, 4.42477], [51.20957, 4.42475], [51.20951, 4.42484], [51.20947, 4.42496], [51.20939, 4.42525], [51.20925, 4.42552], [51.20923, 4.42557], [51.20915, 4.4258], [51.20912, 4.4258], [51.20904, 4.42594], [51.20905, 4.42595], [51.20905, 4.42595], [51.20887, 4.42612], [51.20887, 4.42633], [51.20887, 4.42642], [51.20891, 4.42649], [51.20892, 4.42648], [51.20892, 4.4265], [51.20892, 4.42645], [51.20938, 4.42635], [51.20962, 4.42632]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            poly_line_d849b9bcaf9a3a1ab23e56c2f38b84c1.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ebd8197b9431f9df4036d21328ab3046 = L.polyline(
+                [[51.20962, 4.42632], [51.21015, 4.42619], [51.2101, 4.42622], [51.20995, 4.42624], [51.20988, 4.42623], [51.2098, 4.42627], [51.20962, 4.42632], [51.20948, 4.42633], [51.20915, 4.42642], [51.20915, 4.42642], [51.20899, 4.42645], [51.20892, 4.42669], [51.209, 4.42702]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            poly_line_ebd8197b9431f9df4036d21328ab3046.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_84c5adb3b717b14b8b24ec60c57f54d0 = L.polyline(
+                [[51.209, 4.42702], [51.20906, 4.42733], [51.20912, 4.42755], [51.2091, 4.42757], [51.2091, 4.42755], [51.20912, 4.42754], [51.20912, 4.42753], [51.20915, 4.42758], [51.20917, 4.42769], [51.20915, 4.42788], [51.20922, 4.42819], [51.20924, 4.42835], [51.2093, 4.4285], [51.2093, 4.4286], [51.20933, 4.42892], [51.2094, 4.42915], [51.20937, 4.42925], [51.20937, 4.42926], [51.2093, 4.4293], [51.2093, 4.42932], [51.20925, 4.4293], [51.20902, 4.42943], [51.20893, 4.42949], [51.20893, 4.4295], [51.20875, 4.42929], [51.2087, 4.42905], [51.20864, 4.42867], [51.20859, 4.42862], [51.20852, 4.42835], [51.20843, 4.428], [51.20834, 4.42779], [51.2082, 4.42795], [51.20825, 4.42782], [51.20831, 4.42767], [51.20825, 4.4274], [51.20825, 4.42738], [51.2082, 4.42725], [51.20813, 4.42707], [51.20815, 4.42713], [51.20811, 4.4271], [51.20811, 4.4271], [51.2082, 4.42728], [51.2083, 4.42747], [51.20836, 4.42785], [51.20875, 4.42937], [51.20823, 4.43128], [51.20726, 4.43253], [51.20617, 4.43247], [51.20592, 4.43165], [51.2059, 4.43154], [51.2059, 4.43155], [51.20593, 4.43115], [51.20593, 4.43108], [51.20595, 4.43032], [51.20595, 4.42997], [51.20597, 4.42995], [51.20597, 4.42995], [51.20602, 4.42991], [51.20603, 4.4299], [51.20603, 4.42992], [51.20608, 4.42992], [51.20603, 4.42945], [51.20607, 4.42913], [51.20622, 4.42923], [51.20643, 4.42949], [51.20662, 4.42969], [51.20678, 4.42977], [51.20689, 4.4299], [51.20687, 4.42998], [51.20704, 4.42948], [51.20712, 4.42922], [51.20717, 4.42907], [51.20737, 4.4285], [51.20738, 4.4285], [51.2074, 4.4285], [51.20743, 4.42854], [51.20742, 4.42853], [51.20738, 4.4285], [51.20737, 4.4285], [51.20733, 4.4286], [51.20714, 4.42915], [51.20706, 4.42938], [51.20695, 4.42981], [51.20694, 4.42982], [51.20692, 4.4298], [51.20692, 4.4298], [51.20691, 4.4298], [51.20692, 4.42978], [51.20675, 4.43028], [51.20672, 4.43029], [51.20665, 4.43033], [51.20668, 4.43037], [51.20658, 4.43064]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            poly_line_84c5adb3b717b14b8b24ec60c57f54d0.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_ec8eb77f1d926b48c24c6ae160c98950 = L.polyline(
+                [[51.20658, 4.43064], [51.20645, 4.431], [51.20632, 4.43136], [51.20624, 4.43162], [51.20616, 4.4318], [51.2061, 4.43195], [51.20571, 4.43208], [51.20608, 4.4325], [51.20623, 4.43168], [51.20643, 4.43106], [51.20643, 4.43104], [51.20668, 4.43045], [51.20667, 4.43044], [51.20656, 4.43027], [51.20613, 4.43023]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            poly_line_ec8eb77f1d926b48c24c6ae160c98950.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_7f6f028f58832291cda7abb1b95c2796 = L.polyline(
+                [[51.20613, 4.43023], [51.206, 4.42991], [51.20605, 4.42901]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            poly_line_7f6f028f58832291cda7abb1b95c2796.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_dc9b79b5f174d8e7e6d0ee4cb0617761 = L.polyline(
+                [[51.20605, 4.42901], [51.20605, 4.429], [51.20604, 4.42875], [51.20605, 4.42854], [51.20606, 4.4285], [51.20608, 4.4285], [51.20608, 4.42833], [51.20609, 4.4283], [51.2061, 4.4281], [51.20608, 4.42804], [51.20609, 4.42777], [51.2061, 4.42736], [51.2061, 4.42708], [51.2061, 4.42696], [51.20652, 4.42615]],
+                {"bubblingMouseEvents": true, "color": "yellow", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "yellow", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            poly_line_dc9b79b5f174d8e7e6d0ee4cb0617761.bindTooltip(
+                `<div>
+                     In scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_eb9bf4eaaed26f095fd4ee97336ca204 = L.polyline(
+                [[51.20652, 4.42615], [51.20745, 4.4253], [51.20747, 4.42527], [51.2076, 4.4256], [51.20765, 4.42577], [51.20783, 4.42618], [51.208, 4.42605], [51.20792, 4.4262], [51.20788, 4.42638], [51.20785, 4.42638], [51.20785, 4.42639], [51.20787, 4.42637], [51.20787, 4.42618], [51.20812, 4.42594], [51.20826, 4.4258], [51.20835, 4.42571], [51.2085, 4.42555], [51.2085, 4.42553], [51.20862, 4.42542], [51.20875, 4.4253], [51.20876, 4.42527], [51.2088, 4.42525], [51.20889, 4.42513], [51.209, 4.425], [51.20902, 4.42495], [51.20903, 4.42494], [51.20938, 4.4252], [51.20901, 4.42716], [51.2096, 4.42945], [51.20921, 4.43217], [51.21101, 4.43298], [51.21162, 4.43318], [51.21161, 4.43316], [51.21173, 4.43312], [51.21172, 4.43315], [51.21185, 4.43317], [51.2119, 4.4332], [51.21192, 4.4332]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            poly_line_eb9bf4eaaed26f095fd4ee97336ca204.bindTooltip(
+                `<div>
+                     Buiten scope
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a8abffe09958f93e2767484afa4ba176 = L.marker(
+                [51.19371, 4.38662],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_4b22b722cf733857315bbb01a9bcd87f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a8abffe09958f93e2767484afa4ba176.bindTooltip(
+                `<div>
+                     🏘️ Generaal Armstrongweg<br>⚖️ Totaal: 205 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a8abffe09958f93e2767484afa4ba176.setIcon(icon_4b22b722cf733857315bbb01a9bcd87f);
+            
+    
+            var marker_5cd005bec66ef73d284a038638fd09f5 = L.marker(
+                [51.20023, 4.39123],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_4ed4653972c8ae6f921e3a0ac22bbed8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_5cd005bec66ef73d284a038638fd09f5.bindTooltip(
+                `<div>
+                     🏘️ Montignystraat<br>⚖️ Totaal: 40 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5cd005bec66ef73d284a038638fd09f5.setIcon(icon_4ed4653972c8ae6f921e3a0ac22bbed8);
+            
+    
+            var marker_d0e1d4fb7ff5d31a978a84dddf981399 = L.marker(
+                [51.20455, 4.39488],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_d5a0ccbc69c4c8132639691ae02ab2c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d0e1d4fb7ff5d31a978a84dddf981399.bindTooltip(
+                `<div>
+                     🏘️ Brederodestraat<br>⚖️ Totaal: 25 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0e1d4fb7ff5d31a978a84dddf981399.setIcon(icon_d5a0ccbc69c4c8132639691ae02ab2c8);
+            
+    
+            var marker_685c2b8d907c66182d6aef69bd864072 = L.marker(
+                [51.20778, 4.40239],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_fc691557e8e38c47f71b3b74f6dd3258 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_685c2b8d907c66182d6aef69bd864072.bindTooltip(
+                `<div>
+                     🏘️ Paleisstraat<br>⚖️ Totaal: 5 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_685c2b8d907c66182d6aef69bd864072.setIcon(icon_fc691557e8e38c47f71b3b74f6dd3258);
+            
+    
+            var marker_c9cdc90070675979456a38a110618255 = L.marker(
+                [51.20939, 4.42525],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_da97d886e3f280f77d01cb07762739ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_c9cdc90070675979456a38a110618255.bindTooltip(
+                `<div>
+                     🏘️ De Boeystraat<br>⚖️ Totaal: 200 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9cdc90070675979456a38a110618255.setIcon(icon_da97d886e3f280f77d01cb07762739ba);
+            
+    
+            var marker_beb0aa76f81b772d10b3056a3516c64b = L.marker(
+                [51.20887, 4.42642],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_3945177ed5c1313e33b05352e8007826 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_beb0aa76f81b772d10b3056a3516c64b.bindTooltip(
+                `<div>
+                     🏘️ Kruikstraat<br>⚖️ Totaal: 525 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_beb0aa76f81b772d10b3056a3516c64b.setIcon(icon_3945177ed5c1313e33b05352e8007826);
+            
+    
+            var marker_477c4cc32d6735222948592b901660ac = L.marker(
+                [51.20938, 4.42635],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_b047a8300ed04f3a90f75fdb7c9c200c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_477c4cc32d6735222948592b901660ac.bindTooltip(
+                `<div>
+                     🏘️ Magdalenastraat<br>⚖️ Totaal: 185 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_477c4cc32d6735222948592b901660ac.setIcon(icon_b047a8300ed04f3a90f75fdb7c9c200c);
+            
+    
+            var marker_a41684a977cadb265dc5239e08d3366f = L.marker(
+                [51.20892, 4.42669],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_3f9bf12d155cdf10735bc5fb3f6bf9d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a41684a977cadb265dc5239e08d3366f.bindTooltip(
+                `<div>
+                     🏘️ Rolwagenstraat<br>⚖️ Totaal: 620 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a41684a977cadb265dc5239e08d3366f.setIcon(icon_3f9bf12d155cdf10735bc5fb3f6bf9d9);
+            
+    
+            var marker_df7c42363b183e1a87a87b964176126a = L.marker(
+                [51.20933, 4.42892],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_959c813f1a1fa7111bad059fe988ae49 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_df7c42363b183e1a87a87b964176126a.bindTooltip(
+                `<div>
+                     🏘️ Magdalenastraat<br>⚖️ Totaal: 630 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df7c42363b183e1a87a87b964176126a.setIcon(icon_959c813f1a1fa7111bad059fe988ae49);
+            
+    
+            var marker_b431d44fcafd77d53b381f37a49af9ce = L.marker(
+                [51.20893, 4.4295],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_f2f5148d1b191d50b4b69a9b333d6dc5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b431d44fcafd77d53b381f37a49af9ce.bindTooltip(
+                `<div>
+                     🏘️ Raafstraat<br>⚖️ Totaal: 175 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b431d44fcafd77d53b381f37a49af9ce.setIcon(icon_f2f5148d1b191d50b4b69a9b333d6dc5);
+            
+    
+            var marker_ea9c995f4bcdd4aacff1769a2494ff7c = L.marker(
+                [51.20875, 4.42937],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_ee6acc200ffbf76503a1b6ac94117c1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ea9c995f4bcdd4aacff1769a2494ff7c.bindTooltip(
+                `<div>
+                     🏘️ Lange Van Ruusbroecstraat<br>⚖️ Totaal: 590 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea9c995f4bcdd4aacff1769a2494ff7c.setIcon(icon_ee6acc200ffbf76503a1b6ac94117c1b);
+            
+    
+            var marker_1d3349634814ed1f1b658852fa5a4d27 = L.marker(
+                [51.20622, 4.42923],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_4e49941a26d2727e7b3e8778c8b3bc01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_1d3349634814ed1f1b658852fa5a4d27.bindTooltip(
+                `<div>
+                     🏘️ Grotehondstraat<br>⚖️ Totaal: 395 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d3349634814ed1f1b658852fa5a4d27.setIcon(icon_4e49941a26d2727e7b3e8778c8b3bc01);
+            
+    
+            var marker_d7f51aa7a8192497f1f8c001e26396bd = L.marker(
+                [51.20687, 4.42998],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_2a1c6948e3f7f7a0a769937a202a712b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d7f51aa7a8192497f1f8c001e26396bd.bindTooltip(
+                `<div>
+                     🏘️ Filomenastraat<br>⚖️ Totaal: 135 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d7f51aa7a8192497f1f8c001e26396bd.setIcon(icon_2a1c6948e3f7f7a0a769937a202a712b);
+            
+    
+            var marker_d9936a750d7f10c593af4557d9eb8bb0 = L.marker(
+                [51.20706, 4.42938],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_81fe523ab2efc8fbacee3a8d06bdc73d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_d9936a750d7f10c593af4557d9eb8bb0.bindTooltip(
+                `<div>
+                     🏘️ Kleine Beerstraat<br>⚖️ Totaal: 305 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d9936a750d7f10c593af4557d9eb8bb0.setIcon(icon_81fe523ab2efc8fbacee3a8d06bdc73d);
+            
+    
+            var marker_cfd6af733a6077300530be7fd480aa39 = L.marker(
+                [51.20668, 4.43037],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_d9c7e9a3f060d9940cee65ea471f2ffc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_cfd6af733a6077300530be7fd480aa39.bindTooltip(
+                `<div>
+                     🏘️ Dageraadplaats<br>⚖️ Totaal: 580 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cfd6af733a6077300530be7fd480aa39.setIcon(icon_d9c7e9a3f060d9940cee65ea471f2ffc);
+            
+    
+            var marker_7aa39eccf3bd94d49254bf1e0672ad5b = L.marker(
+                [51.20656, 4.43027],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_01361deb9cb153d5225d86e44848f99b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_7aa39eccf3bd94d49254bf1e0672ad5b.bindTooltip(
+                `<div>
+                     🏘️ Draakstraat<br>⚖️ Totaal: 270 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7aa39eccf3bd94d49254bf1e0672ad5b.setIcon(icon_01361deb9cb153d5225d86e44848f99b);
+            
+    
+            var marker_2df9746dcea70d541cd9d6bd27375383 = L.marker(
+                [51.2061, 4.42696],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_8f665a7310876ac9e78d29f338c9da25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2df9746dcea70d541cd9d6bd27375383.bindTooltip(
+                `<div>
+                     🏘️ Grote Hondstraat<br>⚖️ Totaal: 620 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2df9746dcea70d541cd9d6bd27375383.setIcon(icon_8f665a7310876ac9e78d29f338c9da25);
+            
+    
+            var marker_86be189dcb582e9c1d75b9d54f845d5b = L.marker(
+                [51.20812, 4.42594],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_47ecb1413783343bf28d550dcbbf892d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_86be189dcb582e9c1d75b9d54f845d5b.bindTooltip(
+                `<div>
+                     🏘️ Lange Van Ruusbroecstraat<br>⚖️ Totaal: 260 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86be189dcb582e9c1d75b9d54f845d5b.setIcon(icon_47ecb1413783343bf28d550dcbbf892d);
+            
+    
+            var marker_fbe6a288402ae3527164c0fd99eef067 = L.marker(
+                [51.20903, 4.42494],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_bdc2ed7f7fe5f76565bbfed3a3d32bc5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fbe6a288402ae3527164c0fd99eef067.bindTooltip(
+                `<div>
+                     🏘️ Korte Van Ruusbroecstraat<br>⚖️ Totaal: 470 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fbe6a288402ae3527164c0fd99eef067.setIcon(icon_bdc2ed7f7fe5f76565bbfed3a3d32bc5);
+            
+    
+            var marker_df8d6e8ede8e1f17316dd38ad8d4f651 = L.marker(
+                [51.20921, 4.43217],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_068f4bc9c8c72a565912ff59455e6f0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_df8d6e8ede8e1f17316dd38ad8d4f651.bindTooltip(
+                `<div>
+                     🏘️ Plantin en Moretuslei<br>⚖️ Totaal: 105 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df8d6e8ede8e1f17316dd38ad8d4f651.setIcon(icon_068f4bc9c8c72a565912ff59455e6f0c);
+            
+    
+            var marker_99a7cb1c0df1d329a102af5222ae9ced = L.marker(
+                [51.21192, 4.4332],
+                {
+}
+            ).addTo(map_d92b152db8c542fe668646cef7b7a6aa);
+        
+    
+            var icon_6147f41e33407577f3384e6d42245c4e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "flag",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_99a7cb1c0df1d329a102af5222ae9ced.bindTooltip(
+                `<div>
+                     🏘️ Sergeyselsstraat<br>⚖️ Totaal: 315 kg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99a7cb1c0df1d329a102af5222ae9ced.setIcon(icon_6147f41e33407577f3384e6d42245c4e);
+            
+</script>
+</html>
